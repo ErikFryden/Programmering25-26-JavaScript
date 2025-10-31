@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KlikkerEksempel</title>
+</head>
+<body>
+    <!-- Her oppretter jeg alle elementene som skal være i HTML dokumentet-->
+    <button id="knappEl">Trykk meg!</button> 
+    <button id="knapp3El">reset</button>
+    <button id="knapp4El">Ikke trykk meg!</button>
+    <p id="resultat">Du har trykket på meg 0 ganger</p>
+    <button id="knapp2El">Color me!</button>
+    <script>
+        let knappEl = document.getElementById("knappEl");//første knappen, denne skal legge til en på teller
+        let resultatEl = document.getElementById("resultat");//Dette er teksten som skal brukes for å vise antallet
+        knappEl.addEventListener("click", klikk);//Dette er en "lytter" altså noe som hører etter en hendelse som her er et klikk
+        let teller = 0;//Dette er variabelene som holder orden på antall klikk
+        /* Funksjonen klikk() kjøres når jeg klikker på knappen knappEl på linje 10
+            Klikk hendelsen til funksjonen legges til på linje 18*/
+        function klikk(){
+            teller++;
+            resultatEl.innerHTML = "Du har trykket på meg "+teller+" ganger";
+        }
+        //1. Lag en knapp, som endrer fargen på teksten i resultatet.
+        /* Lager en ny knapp på linje 14, legger til en hendelse på knappe på linje 30 som kjører funksjonen
+        klikkFarge. i funksjonen så legger jeg til farge og bakgrunnsfarge (linje 32 og 33)*/
+        let knapp2El = document.getElementById("knapp2El");
+        knapp2El.addEventListener("click", klikkFarge);
+        function klikkFarge(){
+            resultatEl.style.color = "purple";
+            resultatEl.style.backgroundColor = "yellow";
+        }
+        //2. Lag en ny knapp, som nullstiller telleren og oppdaterer teksten.
+        /* Lager en knapp i HTML biten på linje 11, legger så til klikk hendelse på linje 39 som kjører funksjonen
+        reset, denne funksjonen setter teller til 0 (linje 41) og oppdaterer html biten (linje 42)*/
+        let knapp3El = document.getElementById("knapp3El");
+        knapp3El.addEventListener("click", reset);
+        function reset(){
+            teller=0;
+            resultatEl.innerHTML = "Du har trykket på meg "+teller+" ganger";
+        }
+        //3. Lag en knapp som teller nedover istedenfor oppover.
+        /* Dette er egentlig helt likt klikk() funksjonen, jeg lager en knapp og kopierer koden fra klikk
+        gir den en nytt navn og endrer teller++ til teller--. Ellers er alt likt. */
+        let knapp4El = document.getElementById("knapp4El");
+        knapp4El.addEventListener("click", unklikk);
+        function unklikk(){
+            teller--;
+            resultatEl.innerHTML = "Du har trykket på meg "+teller+" ganger";
+        }
+
+    </script>
+</body>
+</html>

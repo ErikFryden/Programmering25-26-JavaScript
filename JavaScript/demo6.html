@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mer om if setninger</title>
+</head>
+<body>
+    <script>
+        /* For å bruke if-setninger på en effektiv og god måte
+        trenger man å kunne litt om sammenlikningsoperatorer.
+        Her legger vi inn noen eksempler. */
+        /* == lik verdi */
+        console.log(4==4); //To like tall gir oss sann/true
+        console.log("4"==4);//En tekst og en tall som er lik gir oss sann/true
+        console.log("hei"=="Hei");//Skiller på store og små bokstaver usann/false
+
+        /* Lik verdig og datatype === */
+        console.log(4===4); //To like tall gir oss sann/true
+        console.log("4"===4);//En tekst og en tall som er lik gir oss 
+        // usann/false da disse er forskjellige datatyper
+        console.log("hei"==="Hei");//Skiller på store og små bokstaver usann/false
+
+        /* ulik verdi != og ulik verdi eller datatype !== */
+        console.log(4!=4);//False siden disse ikke er ulike
+        console.log(3!=4);//Sann/true siden 3 er ulik 4
+        console.log(3!="3");//False siden disse er like (men ikke samme datatype)
+        console.log(3!=="3");//True siden disse ikke har samme datatype
+    
+        /*  < - Mindre enn
+            > - Større enn
+            <= - Mindre enn eller lik
+            >= - Større enn eller lik  */
+        let tall1=8;
+        let tall2=9;
+        let tall3=9;
+        console.log(tall1>tall2) //tall1 større enn tall2 er usann da 8 er mindre enn 9
+        console.log(tall1<tall2) //tall1 mindre enn tall2 er sann da 8 er mindre enn 9
+        console.log(tall3>=tall2) //tall3 større enn eller lik tall2 er sann fordi de er like
+        console.log(tall1<=tall2) //tall1 mindre enn eller lik tall2 er sann fordi 8 er mindre 9
+    
+        /* && brukes for å legge inn flere betingelser(sjekker) i en og samme linje
+        Alle betingelsene på alle sidene av && må være sanne for at hele skal være sann*/
+        let tall4 = 3;
+        let tall5 = 5;
+        let tall6 = 7;
+        console.log(tall4<tall5 && tall6>tall5);
+        //tall4 er mindre enn tall5 og tall6 er større enn tall5 denne blir sann 3<5 && 7>5
+        console.log(tall4!=tall5 && tall4<=tall6 && tall5===tall6)
+        //tall4 ulik tall5 - true && tall4 mindre eller lik tall 6 - true && tall5 lik tall6 - false
+        //da blir hele usann.
+
+        /* || OR eller brukes når man vil at noe skal være sant, men ikke nødvendigvis alt.*/
+        tall4 = 3;
+        tall5 = 5;
+        tall6 = 7;
+        console.log(tall4!=tall5 && tall4<=tall6 || tall5===tall6)//true siden venstre side er sann
+        console.log(tall5===5 || tall4===5 || tall6===5)//true siden en av de 3 er sann
+
+
+
+
+    </script>
+</body>
+</html>

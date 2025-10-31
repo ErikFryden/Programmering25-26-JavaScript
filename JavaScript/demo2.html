@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        /* Først henter jeg ut elementet fra linje 9, dette gjør jeg med metoden getElementById som er en metode
+        for html elementer innenfor DOM (Document Object Model) altså HTML objektene. Det finnes mange metoder
+        vi kan bruke innenfor DOM.
+        innerHTML er en egenskap som hvert html element har, vet å bruker .innerHTML velger vi egenskapen til
+        det elementet og endrer det til noe nytt. Ved å bruke += legger vi til det nye til det gamle.
+        .style går inn i style egenskapen til elementet, og her kan vi gå videre inn og endre på de forskjellige
+        tingene som .color eller .fontSize (font-size). Merk at vi ikke kan skrive med - i kode og må bruke
+        CamelCase (stor bokstav på nytt ord).
+          */
+        let demoEl = document.getElementById("demo");
+        demoEl.innerHTML = "Dette er en eksempeltekst for innerHTML";
+        demoEl.innerHTML += "<br> Her er linje 2";
+        demoEl.style.color = "blue";
+        demoEl.style.fontSize = "36px";
+
+        /* Hva er en metode? En metode er en funksjon eller ferdig laget kodesnutt som utfører en spesifikk kode. 
+        Denne er laget spesielt knyttet opp mot et objekt, noen metoder blir lagt til i biblioteker i JavaScript
+        ettersom den er ansett som god og er noe som man ser behov for å ha for å lage mer kompleks kode. 
+        Dette fungerer slik at vi kaller på en metode som ligger i et slags bibliotek som vi kan benytte. 
+        I JavaScript og andre programmeringsspråk finnes slike metoder slik at vi kan bruke disse når vi bygger 
+        mer komplekse programmer. På denne måten trenger vi ikke å lage funksjoner for alle mulige ting hele tiden. 
+        Slike metoder og biblioteker blir lagt til i språket fra tid til annen. Noen metoder brukes mer enn andre.
+        */
+
+    </script>
+</body>
+</html>

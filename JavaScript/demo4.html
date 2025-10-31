@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Vi skal lage en billettpris kalkulator
+        Denne definerer en alder og et klokkeslett
+        bilettene skal være bilgere på kvelden etter 20.00 (-20kr)
+        klokkeslett skal være et heltall f.eks 14 når klokken er 
+        14.00
+        Priser:
+        Barn (under 12)     50kr
+        Ungdom (12-18 men ikke 18)      80kr
+        Voksen (18-66 men ikke 66)      120kr
+        Honør (67+)         90kr
+        */
+        let alder = 10;
+        let klokkeslett = 8;
+        let pris = 0;
+        if(klokkeslett>20){
+            pris -= 20;
+        }
+        if(alder<12){
+            pris+=50;
+        }else if(alder<18){
+            pris+=80;
+        }else if(alder<67){
+            pris+=120;
+        }else{
+            pris+= 90;
+        }
+
+        
+        
+
+
+
+        /*
+        if(alder<12){
+            pris +=50;
+        }
+        if(alder>=12 && alder<18){
+            pris+=80;
+        }
+         if(alder>=18 && alder<67){
+            pris+=120;
+        }
+        if(alder>=67){
+            pris+=90;
+        }
+        console.log(pris);
+        */
+    </script>
+</body>
+</html>

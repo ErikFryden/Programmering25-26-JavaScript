@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilfeldig tall</title>
+</head>
+<body id="body">
+    <script>
+       let tilfeldigTall = Math.random();
+       console.log(tilfeldigTall);
+       let tilfeldigTall10 = Math.random()*10;
+       // Math.floor - Math.ceil - Math.round
+        tilfeldigTall10=Math.floor(Math.random()*10)+1;
+        if(tilfeldigTall10 ===10){
+            document.getElementById("body").innerHTML = "Gratulerer, du har flaks!";
+            document.getElementById("body").style.backgroundColor ="green";
+
+        }else{
+            document.getElementById("body").innerHTML = "Prøv igjen!"
+            document.getElementById("body").style.backgroundColor ="red";
+        }
+       console.log(tilfeldigTall10);
+    </script>
+</body>
+</html>

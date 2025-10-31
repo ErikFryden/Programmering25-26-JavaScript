@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terningspill</title>
+</head>
+<body>
+    <script>
+        let yatzi = false;
+        let antall = 0;
+        while(!yatzi){
+        antall++;
+        let terning1 = Math.floor(Math.random()*6)+1;
+        console.log(terning1);
+        let terning2 = Math.floor(Math.random()*6)+1;
+        console.log(terning2);
+        let terning3 = Math.floor(Math.random()*6)+1;
+        console.log(terning3);
+        let terning4 = Math.floor(Math.random()*6)+1;
+        console.log(terning4);
+        let terning5 = Math.floor(Math.random()*6)+1;
+        console.log(terning5);
+        /* Lag en if setning som finner 
+        ut om du har fem like terninger*/
+        if(terning1===terning2 && terning1===terning3 && terning1===terning4 && terning1===terning5){
+           yatzi = true;
+            console.log("terningene er like! Du har yatzi!!!") 
+            console.log(antall);
+        }
+        }
+    </script>
+</body>
+</html>

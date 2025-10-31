@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript del 1</title>
+</head>
+<body>
+    <script>
+        let navn = "Erik Frydenlund"; //Når vi bruker "" rundt innholdet i en variabel, defineres det som en String (tekst).
+        const pi = 3.14; //Tall kan vi bare skrive rett ut, men husk å bruke . som skilletegn og ikke , siden programmeringsspråk er basert på engelsk.
+        let myndig = true;//true/false også kjent som boolean som definerer om noe er sant eller usant.
+        navn = "Erik"; //Når vi skal endre på innholdet i en variabel så bruker vi ikke let og const på nytt.
+        //Let og const brukes kun for å opprette en variabel.
+
+        /* Regneeksempler */
+        let tall1 = 12;
+        let tall2 = 7;
+
+        /* Summering */
+        let sum = tall1+tall2;
+        console.log("summen av "+tall1+" og "+tall2+" er "+sum);
+
+        /* Multiplisering */
+        let produkt = tall1*tall2;
+        console.log("produktet av "+tall1+" og "+tall2+" er "+produkt);
+
+        /* Oppgave */
+        /* Definer to nye tall f.eks tall3 og tall4. Gi disse en verdi
+        regn ut sum(+), differanse(-), produkt(*), kvotient(/) og
+        gjennomsnitt av alle 4 tallene. Skriv ut alle svarene i console*/
+        let tall3 = 19;
+        let tall4 = 2;
+        let gjennomsnitt = (tall1+tall2+tall3+tall4)/4;
+        console.log("Gjennomsnittet på de fire tallene er: "+gjennomsnitt);
+
+
+        /* Modulus */
+        /*Modulus er en operator som gir oss resten av et tall delt på et annet tall.*/
+        let rest = 9%5; //Her vil 9 delt på 5 gi oss 1 hel femmer, så vi har en rest på 4. Så rest = 4
+        console.log(rest);
+
+        /*Increment (++) */
+        /*Brukes når vi skal øke noe med 1, eller iterere noe. */
+        let tall5 = 0; //oppretter et nytt tall som vi gir verdien 0.
+        tall5++; //Incrementerer tallet med en, dvs tall5 = tall5 +1 
+        console.log(tall5); //
+        tall5++;
+        tall5++;
+        tall5++;
+        console.log(tall5);//For hver gang vi bruker ++ legger vi til en. tall5=4
+        /*Decrement */
+        //Trekker fra en hver gang.
+        tall5--;
+        tall5--;
+        console.log(tall5);//For hver gang vi bruker -- trekker vi fra 1 på verdien. tall5=2
+
+        /* Oppgave:
+        1.Lag et tall som starter på 7, bruk increment (++) slik at tallet blir 12 og skriv
+        ut tallet i console.*/
+        let tall6 = 7;
+        tall6++;
+        tall6++;
+        tall6++;
+        tall6++;
+        tall6++;
+        console.log(tall6); //resultat 12
+        /*
+        2.Bruk det samme tallet og decrement tallet slik at det blir 10.*/
+        tall6--;
+        tall6--;
+        console.log(tall6); //resultat 10
+        /*3.Lag en ny variabel som du kaller rest2, prøv finn resten av 146 delt på tallet
+        du laget i oppgaven over ved hjelp av modulus (%) operatoren. 
+        Skriv det i console.*/
+        let rest2 = 146%tall6;
+        console.log(rest2);//resultat 6
+    </script>
+</body>
+</html>
